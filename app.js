@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const { simpleInterest, compoundInterest } = require('./calculator.js');
 const { validateSimple, validateCompound } = require('./validator.js');
 
@@ -6,6 +7,7 @@ const { validateSimple, validateCompound } = require('./validator.js');
 const app = express();
 
 app.use(express.json());
+app.use(morgan('dev'));
 app.set('view engine', 'ejs');
 
 app.listen(3000, () => {
@@ -18,7 +20,7 @@ app.post('/api/calculate/simple-interest', (req, res) => {
 
         //Input Validation
         errors = validateSimple(principal, rate, time);
-        if  (errors)    {
+        if  (errors) {
             return res.status(400).json({error: errors});
         }
 
@@ -26,7 +28,7 @@ app.post('/api/calculate/simple-interest', (req, res) => {
         const {interest, amount} = simpleInterest(principal, rate, time);
 
         return res.status(200).json({ interest, amount });
-    } catch (error){
+    } catch (error) {
         console.log(error);
         return res.status(500).json({error: 'Internal server error'});
     }

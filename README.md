@@ -23,7 +23,7 @@ A simple Node.js and Express API for calculating simple and compound interest.
     ```
 
 2.  **Installing dependencies:**
-    This will install `express` and `nodemon` as listed in `package.json`:
+    This will install `express`, `morgan` and `nodemon` as listed in `package.json`:
     ```sh
     npm install
     ```
@@ -46,7 +46,7 @@ A simple Node.js and Express API for calculating simple and compound interest.
     node app.js
     ```
 
-Once running, the server will be available at http://localhost:3001.
+Once running, the server will be available at http://localhost:3000.
 
 * ### API Endpoints
 
@@ -58,4 +58,4 @@ Once running, the server will be available at http://localhost:3001.
     ```
 
 
-For detailed information on request/response formats, please see the full [API Documentation]().
+For detailed information on request/response formats, please see the full [API Documentation](https://drive.google.com/file/d/14s4DA9qv06mAd9VHPwCzFrt3RqjV6k_q/view?usp=sharing).

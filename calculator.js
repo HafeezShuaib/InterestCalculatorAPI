@@ -6,10 +6,13 @@ module.exports.simpleInterest = (principal, rate, time) => {
 }
 
 module.exports.compoundInterest = (principal, rate, time, frequency) => {
-    const interest = principal * Math.pow(1 + rate / (frequency * 100), frequency * time).toFixed(2);
-    const amount = Number((interest + principal).toFixed(2));
+    const amount = principal * Math.pow(1 + rate / (frequency * 100), frequency * time);
+    const interest = amount - principal;
 
-    return {interest, amount};
+    return {
+        interest: Number(interest.toFixed(2)),
+        amount: Number(amount.toFixed(2))
+    };
 }
 // throw Error('incorrect password');
 // module.exports = {simpleInterest, compoundInterest};
