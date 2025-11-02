@@ -18,7 +18,7 @@ A simple Node.js and Express API for calculating simple and compound interest.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/HafeezShuaib/InterestCalculatorAPI.git](https://github.com/HafeezShuaib/InterestCalculatorAPI.git)
+    git clone https://github.com/HafeezShuaib/InterestCalculatorAPI.git
     cd InterestCalculatorAPI
     ```
 
@@ -38,8 +38,6 @@ A simple Node.js and Express API for calculating simple and compound interest.
     nodemon app.js
     ```
 
-* ### For Production
-
     This will run the application using node:
 
     ```sh
@@ -58,4 +56,4 @@ Once running, the server will be available at http://localhost:3000.
     ```
 
 
-For detailed information on request/response formats, please see the full [API Documentation](https://drive.google.com/file/d/14s4DA9qv06mAd9VHPwCzFrt3RqjV6k_q/view?usp=sharing).
+For detailed information on request/response formats, please see the full [API Documentation](https://drive.google.com/file/d/1lWUbloQKyuBcyelNGcyQPb5zn_LQF9q1/view?usp=sharing).
